@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "DateCalculator.System/1.0.0": {
+        "dependencies": {
+          "DateCalculator.Models": "1.0.0",
+          "DateCalculator.Utils": "1.0.0"
+        },
+        "runtime": {
+          "DateCalculator.System.dll": {}
+        }
+      },
+      "DateCalculator.Models/1.0.0": {
+        "runtime": {
+          "DateCalculator.Models.dll": {}
+        }
+      },
+      "DateCalculator.Utils/1.0.0": {
+        "dependencies": {
+          "DateCalculator.Models": "1.0.0"
+        },
+        "runtime": {
+          "DateCalculator.Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DateCalculator.System/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DateCalculator.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DateCalculator.Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
