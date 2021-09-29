@@ -21,8 +21,7 @@ namespace DateCalculator.Models
             {
                 base.BeforeCalculate(date, value);
 
-                //var decrease = new Decrease(Amount, base.SpentDaysInTheYear);
-
+                //work in progress
                 return new DateTime();
             }
             catch (Exception ex)

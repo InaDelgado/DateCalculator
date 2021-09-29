@@ -1,13 +1,8 @@
 ﻿using DateCalculator.Models.Extensions;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DateCalculator.Models
 {
-    /// <summary>
-    /// Represents the operation's strategy
-    /// </summary>
     public abstract class Operation
     {
         protected DateInput DateInput { get; set; }

@@ -4,7 +4,8 @@
     {
         public static bool IsValid(string dateTime)
         {
-            //expressão regular para cá
+            //work in progress
+            //create regex
             return true;
         }
     }

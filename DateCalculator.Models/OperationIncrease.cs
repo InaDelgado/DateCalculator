@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DateCalculator.Models
 {
@@ -10,7 +8,8 @@ namespace DateCalculator.Models
         {
             try
             {
-                var increase = new Increase(date, value);
+
+                //work in progress
             }
             catch (Exception)
             {
