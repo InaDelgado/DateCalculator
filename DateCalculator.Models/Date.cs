@@ -1,6 +1,6 @@
 ﻿namespace DateCalculator.Models
 {
-    public class DateInput
+    public class Date
     {
         public int Day { get; set; }
         public int Month { get; set; }

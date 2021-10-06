@@ -1,11 +1,18 @@
-﻿namespace DateCalculator.Utils.Validators
+﻿using DateCalculator.Utils.Exceptions;
+
+namespace DateCalculator.Utils.Validators
 {
     public static class OperationValidator
     {
         public static bool IsValid(string operation)
-        => !string.IsNullOrWhiteSpace(operation) && IsIncreaseDecreaseOperation(operation);
+        {
+            if (string.IsNullOrWhiteSpace(operation) || !IsValidOperation(operation))
+                throw new InvalidInputOperationException();
 
-        private static bool IsIncreaseDecreaseOperation(string operation)
+            return true;
+        }
+
+        private static bool IsValidOperation(string operation)
         => (operation.Equals(ConstsUtils.INCREASE) || operation.Equals(ConstsUtils.DECREASE));
     }
 }

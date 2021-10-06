@@ -1,9 +1,20 @@
-﻿namespace DateCalculator.Utils
+﻿using DateCalculator.Utils.Exceptions;
+using DateCalculator.Utils.Extensions;
+
+namespace DateCalculator.Utils
 {
     public static class TimeValidator
     {
-        public static bool IsValid(int hour, int minute)
-        => ValidateTime(hour, minute);
+        public static bool IsValid(string dateTime)
+        {
+            int hour = dateTime.GetHour();
+            int minute = dateTime.GetMinute();
+
+            if(!ValidateTime(hour, minute))
+                throw new InvalidTimeException();
+
+            return true;
+        }
 
         private static bool HourIsValid(int hour)
         => (hour >= 0 && hour < 24);

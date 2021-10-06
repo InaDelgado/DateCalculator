@@ -1,7 +1,23 @@
-﻿namespace DateCalculator.Utils.Extensions
+﻿using System.Text.RegularExpressions;
+
+namespace DateCalculator.Utils.Extensions
 {
     public static class StringExtension
     {
+        public static bool FormatDateIsMatch(this string enteredDate)
+        {
+            string pattern = "[0-9]{2}[/][0-9]{2}[/][0-9]{4}[ ][0-9]{2}[:][0-9]{2}";
+
+            return Regex.IsMatch(enteredDate, pattern);
+        }
+
+        public static bool FormatAmountIsMatch(this string enteredAmount)
+        {
+            string pattern = "[0-9]{1,5}";
+
+            return Regex.IsMatch(enteredAmount, pattern);
+        }
+
         public static string GetDateString(this string entered)
         {
             int indice = entered.IndexOf(" ");

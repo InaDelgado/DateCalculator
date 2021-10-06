@@ -12,10 +12,10 @@ namespace DateCalculator.System
     /// </summary>
     public class DateManager
     {
-        public string Date { get; }
-        public string Operation { get; }
-        public string Amount { get; }
-        private DateInput DateInput { get; set; }
+        private string InputDate { get; }
+        private string Operation { get; }
+        private string Amount { get; }
+        private Date Date { get; set; }
         private Operation OperationStrategy { get; set; }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace DateCalculator.System
         /// <param name="amount">/Represents an entered amount to performe the date calculation</param>
         public DateManager(string date, string operation, string amount)
         {
-            Date = date;
+            InputDate = date;
             Operation = operation;
             Amount = amount;
         }
@@ -54,15 +54,16 @@ namespace DateCalculator.System
         /// </summary>
         /// <returns>Return the calculated date</returns>
         public DateTime ExecuteStrategy()
-        => OperationStrategy.Calculate(DateInput, Amount);
+        => OperationStrategy.Calculate(Date, Amount);
 
         public void ValidateDateTime()
         {
             try
             {
-                var validator = new ValidatorInput(Operation, Date, Amount, DateInput);
+                var validator = new InputValidator(Operation, InputDate, Amount);
 
-                validator.InputIsValid();
+                if(validator.InputIsValid())
+                    PopulateDate();
             }
             catch (Exception ex)
             {
@@ -72,13 +73,13 @@ namespace DateCalculator.System
 
         public void PopulateDate()
         {
-            DateInput = new DateInput
+            Date = new Date
             {
-                Day = Date.GetDay(),
-                Month = Date.GetMonth(),
-                Year = Date.GetYear(),
-                Hour = Date.GetHour(),
-                Minute = Date.GetMinute()
+                Day = InputDate.GetDay(),
+                Month = InputDate.GetMonth(),
+                Year = InputDate.GetYear(),
+                Hour = InputDate.GetHour(),
+                Minute = InputDate.GetMinute()
             };
         }
     }

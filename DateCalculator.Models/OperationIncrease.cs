@@ -20,7 +20,7 @@ namespace DateCalculator.Models
             return new DateTime();
         }
 
-        public override DateTime Calculate(DateInput date, string value)
+        public override DateTime Calculate(Date date, string value)
         {
             throw new NotImplementedException();
         }

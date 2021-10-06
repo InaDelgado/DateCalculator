@@ -5,13 +5,13 @@ namespace DateCalculator.Models
 {
     public abstract class Operation
     {
-        protected DateInput DateInput { get; set; }
+        protected Date DateInput { get; set; }
         protected int SpentDaysInTheYear { get; set; }
         protected long Amount;
 
-        public abstract DateTime Calculate(DateInput date, string value);
+        public abstract DateTime Calculate(Date date, string value);
 
-        public void BeforeCalculate(DateInput date, string amount)
+        public void BeforeCalculate(Date date, string amount)
         {
             long.TryParse(amount, out Amount);
             SpentDaysInTheYear = DaysSpentInTheYear();

@@ -15,7 +15,7 @@ namespace DateCalculator.Models
         /// <param name="date"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public override DateTime Calculate(DateInput date, string value)
+        public override DateTime Calculate(Date date, string value)
         {
             try
             {

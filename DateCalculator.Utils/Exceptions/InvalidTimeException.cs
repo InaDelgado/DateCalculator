@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DateCalculator.Utils.Exceptions
 {
@@ -12,7 +10,7 @@ namespace DateCalculator.Utils.Exceptions
         }
 
         public InvalidTimeException()
-            : this("That's a invalid operation")
+            : this("That's a invalid time")
         {
         }
     }

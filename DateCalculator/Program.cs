@@ -8,7 +8,7 @@ namespace DateCalculator.System
         {
             try
             {
-                DisplayInput();
+                InputDisplay();
             }
             catch (Exception ex)
             {
@@ -17,7 +17,7 @@ namespace DateCalculator.System
             }
         }
 
-        static void DisplayInput()
+        static void InputDisplay()
         {
             Console.WriteLine("______________________________________________________________________________");
             Console.WriteLine("       PLEASE, ENTER WITH DATAS TO INCREASE OR TO DECREASE DATETIME");
@@ -41,10 +41,10 @@ namespace DateCalculator.System
 
             context.ToManage();
             var calculatedDate = context.ExecuteStrategy();
-            DisplayOutPut(calculatedDate);
+            ResultDisplay(calculatedDate);
         }
 
-        static void DisplayOutPut(DateTime calculatedDate)
+        static void ResultDisplay(DateTime calculatedDate)
         {
             Console.WriteLine("______________________________________________________________________________");
             Console.Write("       CALCULATION RESULT:  " + calculatedDate);

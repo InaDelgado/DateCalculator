@@ -10,7 +10,7 @@ namespace DateCalculator.Utils.Exceptions
         }
 
         public InvalidDateException()
-            : this("Date informed is not valid")
+            : this("That's a invalid Date")
         {
         }
     }
