@@ -2,7 +2,7 @@
 O projeto DateCalculator é um refactoring de um exame antigo. Trata-se de um exercício de codificação, ele não leva em consideração a existência da classe DateTime, e realiza o calculo da data que tem entrada no formato string.
 No console o usuário informa a data no formato demonstrado, faz a escolha da operação entre incremento ou decremento e o valor para isso. Após isso o resultado da operação é exibido. 
 
-> **É importante dizer que esse é o projeto em processo de refactoring, ainda não está finalizado.**
+> **É importante dizer que esse é um projeto em processo de refactoring, ainda não está finalizado.**
 
 
 The following project consists of refactoring of an old exam. 
