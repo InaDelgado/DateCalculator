@@ -4,7 +4,7 @@ namespace DateCalculator.Models
 {
     public class OperationIncrease : Operation
     {
-        public DateTime Calculate(string date, long value)
+        public override string Calculate(Date date, string value)
         {
             try
             {
@@ -17,12 +17,7 @@ namespace DateCalculator.Models
                 throw;
             }
 
-            return new DateTime();
-        }
-
-        public override DateTime Calculate(Date date, string value)
-        {
-            throw new NotImplementedException();
+            return "";
         }
     }
 }

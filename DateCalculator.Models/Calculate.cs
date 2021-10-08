@@ -4,8 +4,7 @@ namespace DateCalculator.Models
 {
     public abstract class Calculate
     {
-        protected int IndexOfThePossibleMonth { get; set; }
-        protected long DaysRemaining { get; set; }
+        protected long DaysRemaining;
 
         public abstract int DaysOfCalculatedMonth(int month);
 
@@ -13,10 +12,10 @@ namespace DateCalculator.Models
 
         public abstract long DaysRemainingForTheCalculatedYear();
 
-        public long DifferenceOfDays()
-        => DaysRemaining - Consts.DAYSFORMONTH.ElementAt(IndexOfThePossibleMonth);
+        public long CalculateDifferenceOfDays(int index)
+        => DaysRemaining - Consts.DAYSFORMONTH.ElementAt(index);
 
-        public bool NextMonth()
-        => DifferenceOfDays() > 0;
+        public bool IsNextMonth(int index)
+        => CalculateDifferenceOfDays(index) > 0;
     }
 }

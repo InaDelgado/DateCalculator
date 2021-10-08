@@ -36,16 +36,17 @@ namespace DateCalculator.System
         /// </summary>
         public void ToManage()
         {
-            switch (Operation)
+            try
             {
-                case nameof(ConstsUtils.INCREASE):
+                if (Operation.Equals(ConstsUtils.INCREASE))
                     OperationStrategy = new OperationIncrease();
-                    break;
-                case nameof(ConstsUtils.DECREASE):
+
+                if (Operation.Equals(ConstsUtils.DECREASE))
                     OperationStrategy = new OperationDecrease();
-                    break;
-                default:
-                    throw new InvalidInputOperationException();
+            }
+            catch (Exception)
+            {
+                throw new InvalidInputOperationException();
             }
         }
 
@@ -53,7 +54,7 @@ namespace DateCalculator.System
         /// Performe calculation according the chosen strategy
         /// </summary>
         /// <returns>Return the calculated date</returns>
-        public DateTime ExecuteStrategy()
+        public string ExecuteCalculation()
         => OperationStrategy.Calculate(Date, Amount);
 
         public void ValidateDateTime()

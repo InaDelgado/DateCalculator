@@ -14,6 +14,7 @@ namespace DateCalculator.System
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
+                Console.ReadLine();
             }
         }
 
@@ -29,25 +30,24 @@ namespace DateCalculator.System
             string amount = Console.ReadLine();
             Console.WriteLine("______________________________________________________________________________");
 
-            Console.ReadLine();
+            var calculatedDate = Calculate(date, operation, amount);
 
-            Calculate(date, operation, amount);
+            ResultDisplay(calculatedDate);
         }
 
-        static void Calculate(string date, string operation, string amount)
+        static string Calculate(string date, string operation, string amount)
         {
             var context = new DateManager(date, operation, amount);
             context.ValidateDateTime();
 
             context.ToManage();
-            var calculatedDate = context.ExecuteStrategy();
-            ResultDisplay(calculatedDate);
+            return context.ExecuteCalculation();    
         }
 
-        static void ResultDisplay(DateTime calculatedDate)
+        static void ResultDisplay(string calculatedDate)
         {
             Console.WriteLine("______________________________________________________________________________");
-            Console.Write("       CALCULATION RESULT:  " + calculatedDate);
+            Console.WriteLine("       CALCULATION RESULT:  " + calculatedDate);
             Console.WriteLine("______________________________________________________________________________");
             Console.ReadLine();
         }

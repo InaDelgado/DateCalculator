@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 
 namespace DateCalculator.Models
 {
@@ -9,10 +6,11 @@ namespace DateCalculator.Models
     {
         private long Amount { get; }
         private long SpentDays { get; }
+        private int IndexMonth { get; }
 
         public CalculateDecrease(long amount, long spentDays, int indexMonth)
         {
-            base.IndexOfThePossibleMonth = indexMonth;
+            IndexMonth = indexMonth;
             Amount = amount;
             SpentDays = spentDays;
         }

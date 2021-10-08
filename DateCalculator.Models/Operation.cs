@@ -1,5 +1,4 @@
 ﻿using DateCalculator.Models.Extensions;
-using System;
 
 namespace DateCalculator.Models
 {
@@ -9,19 +8,20 @@ namespace DateCalculator.Models
         protected int SpentDaysInTheYear { get; set; }
         protected long Amount;
 
-        public abstract DateTime Calculate(Date date, string value);
+        public abstract string Calculate(Date date, string value);
 
         public void BeforeCalculate(Date date, string amount)
         {
+            DateInput = date;
             long.TryParse(amount, out Amount);
             SpentDaysInTheYear = DaysSpentInTheYear();
-            DateInput = date;
         }
 
         public int DaysSpentInTheYear()
-        => (DaysUntilPreviousMonth() + DateInput.Day);
+        {
+            var amountDaysUntilPreviousMonth = Consts.DAYSFORMONTH.FindValue(DateInput.Month - 1);
 
-        public int DaysUntilPreviousMonth()
-        => Consts.DAYSFORMONTH.FindValue(DateInput.Month - 1);
+            return (amountDaysUntilPreviousMonth + DateInput.Day);
+        }
     }
 }

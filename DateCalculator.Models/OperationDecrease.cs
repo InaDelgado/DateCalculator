@@ -7,22 +7,21 @@ namespace DateCalculator.Models
     /// </summary>
     public class OperationDecrease : Operation
     {
-        private int DaysRemainingForTheCalculatedYear { get; }
-
         /// <summary>
         /// Defines which operation should be performed
         /// </summary>
         /// <param name="date"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public override DateTime Calculate(Date date, string value)
+        public override string Calculate(Date date, string value)
         {
             try
             {
-                base.BeforeCalculate(date, value);
+                BeforeCalculate(date, value);
 
-                //work in progress
-                return new DateTime();
+                var decrease = new Decrease(Amount, SpentDaysInTheYear, DateInput.Year);
+
+                return $"{decrease.CalculateNewDate()} {DateInput.Hour}:{DateInput.Minute}";
             }
             catch (Exception ex)
             {

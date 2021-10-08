@@ -18,7 +18,7 @@ namespace DateCalculator.Utils.Validators
 
         public static bool IsValidFormatAmount(string amount)
         {
-            if(amount.FormatAmountIsMatch())
+            if(!amount.FormatAmountIsMatch())
                 throw new FormatStringException("Input amount format is invalid");
 
             return true;
