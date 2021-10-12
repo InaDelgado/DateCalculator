@@ -46,7 +46,7 @@ namespace DateCalculator.System
             }
         }
 
-        public Operation ExecuteCalculation()
+        public Operation ExecuteFactory()
         => _operationFactory.FindOperation();
 
         public void ValidateDateTime()

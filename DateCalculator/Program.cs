@@ -42,7 +42,7 @@ namespace DateCalculator.System
             context.ValidateDateTime();
 
             context.ToManage();
-            Operation operation = context.ExecuteCalculation();
+            Operation operation = context.ExecuteFactory();
             return operation.Calculate();
         }
 
