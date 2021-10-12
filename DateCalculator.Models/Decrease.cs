@@ -17,6 +17,7 @@ namespace DateCalculator.Models
             Amount = amount;
             SpentDaysInTheYear = spentDays;
             Year = year;
+            // está errado passar o amount, o correto é passar o valor de dias após redução do montante informado
             IndexOfMonth = Consts.DAYSFORMONTH.FindIndexRange(Amount);
             calculate = new CalculateDecrease(Amount, SpentDaysInTheYear, IndexOfMonth);
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DateCalculator.Models;
+using System;
 
 namespace DateCalculator.System
 {
@@ -24,24 +25,25 @@ namespace DateCalculator.System
             Console.WriteLine("       PLEASE, ENTER WITH DATAS TO INCREASE OR TO DECREASE DATETIME");
             Console.Write("       Date and Time (dd/mm/yyyy hh:mm): ");
             string date = Console.ReadLine();
-            Console.Write("       Operation ('+', '-'): ");
-            string operation = Console.ReadLine();
+            Console.Write("       Operation ('increase' or 'decrease'): ");
+            string opInput = Console.ReadLine();
             Console.Write("       Amount for the operation: ");
             string amount = Console.ReadLine();
             Console.WriteLine("______________________________________________________________________________");
 
-            var calculatedDate = Calculate(date, operation, amount);
+            var calculatedDate = Calculate(date, opInput, amount);
 
             ResultDisplay(calculatedDate);
         }
 
-        static string Calculate(string date, string operation, string amount)
+        static string Calculate(string date, string opInput, string amount)
         {
-            var context = new DateManager(date, operation, amount);
+            var context = new DateManager(date, opInput, amount);
             context.ValidateDateTime();
 
             context.ToManage();
-            return context.ExecuteCalculation();    
+            Operation operation = context.ExecuteCalculation();
+            return operation.Calculate();
         }
 
         static void ResultDisplay(string calculatedDate)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DateCalculator.Models.Extensions;
+using System;
 
 namespace DateCalculator.Models
 {
@@ -7,26 +8,62 @@ namespace DateCalculator.Models
     /// </summary>
     public class OperationDecrease : Operation
     {
+        private readonly string _operationType;
+        private Date _dateInput;
+        private long _amount;
+        private int _spentDays;
+
+        public OperationDecrease(Date dateInput, long amount)
+        {
+            _operationType = "Decrease";
+            _dateInput = dateInput;
+            _amount = amount;
+        }
+
+        public override string OperationType
+        {
+            get { return _operationType; }
+        }
+
+        public override Date DateInput
+        {
+            get { return _dateInput; }
+            set { _dateInput = value; }
+        }
+
+        public override long Amount 
+        { 
+            get { return _amount; } 
+            set { _amount = value; }
+        }
+
         /// <summary>
         /// Defines which operation should be performed
         /// </summary>
         /// <param name="date"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public override string Calculate(Date date, string value)
+        public override string Calculate()
         {
             try
             {
-                BeforeCalculate(date, value);
+                _spentDays = DaysSpentInTheYear();
 
-                var decrease = new Decrease(Amount, SpentDaysInTheYear, DateInput.Year);
+                var decrease = new Decrease(_amount, _spentDays, _dateInput.Year);
 
-                return $"{decrease.CalculateNewDate()} {DateInput.Hour}:{DateInput.Minute}";
+                return $"{decrease.CalculateNewDate()} {_dateInput.Hour}:{_dateInput.Minute}";
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public int DaysSpentInTheYear()
+        {
+            var amountDaysUntilPreviousMonth = Consts.DAYSFORMONTH.FindValue(DateInput.Month - 1);
+
+            return (amountDaysUntilPreviousMonth + DateInput.Day);
         }
     }
 }
