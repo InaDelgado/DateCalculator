@@ -1,37 +1,52 @@
-﻿using System.Linq;
+﻿using DateCalculator.Models.Extensions;
+using System.Linq;
 
 namespace DateCalculator.Models
 {
     public class CalculateDecrease : Calculate
     {
-        private long Amount { get; }
-        private long SpentDays { get; }
-        private int IndexMonth { get; }
+        private long _amount;
+        private long _spentDays;
+        protected int _indexMonth;
+        private long _daysRemaining;
 
-        public CalculateDecrease(long amount, long spentDays, int indexMonth)
+        public CalculateDecrease(long amount, long spentDays)
         {
-            IndexMonth = indexMonth;
-            Amount = amount;
-            SpentDays = spentDays;
+            _amount = amount;
+            _spentDays = spentDays;
+            _indexMonth = DaysRemainingForTheCalculatedYear().TakeMonth();
+            _daysRemaining = DaysRemainingForTheCalculatedYear();
         }
 
-        public override int DaysOfCalculatedMonth(int month)
-        => Consts.DAYSEACHMONTH.ElementAt(month);
+        public override long DaysRemaining 
+        {
+            get { return _daysRemaining; } 
+            set { _daysRemaining = value; }
+        }
 
         private long DecreaseDays(long amount, long days)
-        => (amount > days) ?
-            (amount - days) :
-            (days - amount);
+        {
+            return (amount > days) ? (amount - days) : (days - amount);
+        }
 
         public override long CalculateYear()
-        => DecreaseDays(Amount, SpentDays) / 365;
+        {
+            return DecreaseDays(_amount, _spentDays) / 365;
+        }
 
         public override long DaysRemainingForTheCalculatedYear()
         { 
-            var days = DecreaseDays(Amount, SpentDays) % 365;
-            base.DaysRemaining = days;
+            return DecreaseDays(_amount, _spentDays) % 365;
+        }
 
-            return days;
+        public override long CalculateDifferenceOfDays()
+        {
+            return _daysRemaining - Consts.DAYSFORMONTH.ElementAt(_indexMonth);
+        }
+
+        public override bool IsNextMonth()
+        {
+            return CalculateDifferenceOfDays() > 0;
         }
     }
 }

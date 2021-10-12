@@ -3,9 +3,6 @@ using System;
 
 namespace DateCalculator.Models
 {
-    /// <summary>
-    /// Represents the concrete class for Decrease Operation
-    /// </summary>
     public class OperationDecrease : Operation
     {
         private readonly string _operationType;
@@ -37,19 +34,13 @@ namespace DateCalculator.Models
             set { _amount = value; }
         }
 
-        /// <summary>
-        /// Defines which operation should be performed
-        /// </summary>
-        /// <param name="date"></param>
-        /// <param name="value"></param>
-        /// <returns></returns>
         public override string Calculate()
         {
             try
             {
                 _spentDays = DaysSpentInTheYear();
 
-                var decrease = new Decrease(_amount, _spentDays, _dateInput.Year);
+                var decrease = new Decrease(_amount, _spentDays, _dateInput);
 
                 return $"{decrease.CalculateNewDate()} {_dateInput.Hour}:{_dateInput.Minute}";
             }
@@ -61,9 +52,9 @@ namespace DateCalculator.Models
 
         public int DaysSpentInTheYear()
         {
-            var amountDaysUntilPreviousMonth = Consts.DAYSFORMONTH.FindValue(DateInput.Month - 1);
+            var amountDaysUntilPreviousMonth = Consts.DAYSFORMONTH.FindValue(_dateInput.Month - 1);
 
-            return (amountDaysUntilPreviousMonth + DateInput.Day);
+            return (amountDaysUntilPreviousMonth + _dateInput.Day);
         }
     }
 }

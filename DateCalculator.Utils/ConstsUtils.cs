@@ -2,7 +2,7 @@
 {
     public class ConstsUtils
     {
-        public static readonly string INCREASE = "+";
-        public static readonly string DECREASE = "-";
+        public static readonly string INCREASE = "increase";
+        public static readonly string DECREASE = "decrease";
     }
 }

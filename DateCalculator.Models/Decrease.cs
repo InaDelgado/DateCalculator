@@ -3,23 +3,14 @@ using System;
 
 namespace DateCalculator.Models
 {
-    internal class Decrease
+    internal class Decrease : CalculateDecrease
     {
-        public int IndexOfMonth { get; }
-        private int Month;
-        private CalculateDecrease calculate { get; }
-        private long Amount { get; }
-        private int SpentDaysInTheYear { get; }
-        private int Year { get; }
+        private Date _dateInput;
 
-        public Decrease(long amount, int spentDays, int year)
+        public Decrease(long amount, int spentDays, Date dateInput)
+            : base(amount, spentDays)
         {
-            Amount = amount;
-            SpentDaysInTheYear = spentDays;
-            Year = year;
-            // está errado passar o amount, o correto é passar o valor de dias após redução do montante informado
-            IndexOfMonth = Consts.DAYSFORMONTH.FindIndexRange(Amount);
-            calculate = new CalculateDecrease(Amount, SpentDaysInTheYear, IndexOfMonth);
+            _dateInput = dateInput;
         }
 
         public string CalculateNewDate()
@@ -33,8 +24,8 @@ namespace DateCalculator.Models
 
         private string NewYear()
         {
-            var inputYear = Year;
-            var yearsToDecrease = calculate.CalculateYear();
+            var inputYear = _dateInput.Year;
+            var yearsToDecrease = CalculateYear();
             var newYear = (yearsToDecrease > inputYear) ? 0 : (inputYear - yearsToDecrease);
 
             return newYear.ToString();
@@ -42,20 +33,19 @@ namespace DateCalculator.Models
 
         private string NewMonth()
         {
-            bool isNextMonth = calculate.IsNextMonth(IndexOfMonth);
-            int adjustedMonth = (IndexOfMonth + 1);
-            int monthFromRange = IndexOfMonth;
+            bool isNextMonth = IsNextMonth();
+            int adjustedMonth = (_indexMonth + 1);
+            int monthFromRange = _indexMonth;
             int newMonth = (isNextMonth) ? adjustedMonth : monthFromRange;
-            Month = newMonth;
 
             return newMonth.ToString();
         }
 
         private string NewDay()
         {
-            bool nextMonth = calculate.IsNextMonth(IndexOfMonth);
-            var difference = Math.Abs(calculate.CalculateDifferenceOfDays(IndexOfMonth));
-            var daysOfNewMonth = calculate.DaysOfCalculatedMonth(Month);
+            bool nextMonth = IsNextMonth();
+            var difference = Math.Abs(CalculateDifferenceOfDays());
+            var daysOfNewMonth = int.Parse(NewMonth()).DaysOfMonth();
             var newDay = (nextMonth) ? difference : (daysOfNewMonth - difference);
 
             return newDay.ToString();

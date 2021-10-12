@@ -13,6 +13,6 @@ namespace DateCalculator.Utils.Validators
         }
 
         private static bool IsValidOperation(string operation)
-        => (operation.Equals(ConstsUtils.INCREASE) || operation.Equals(ConstsUtils.DECREASE));
+        => (operation.ToLower().Equals(ConstsUtils.INCREASE) || operation.ToLower().Equals(ConstsUtils.DECREASE));
     }
 }
