@@ -8,6 +8,6 @@ C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netsta
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netstandard2.0\DateCalculator.Utils.AssemblyInfoInputs.cache
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netstandard2.0\DateCalculator.Utils.AssemblyInfo.cs
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netstandard2.0\DateCalculator.Utils.csproj.CoreCompileInputs.cache
-C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netstandard2.0\DateCalculator.Utils.csproj.CopyComplete
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netstandard2.0\DateCalculator.Utils.dll
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netstandard2.0\DateCalculator.Utils.pdb
+C:\Users\inaia\source\repos\DateCalculator\DateCalculator.Utils\obj\Debug\netstandard2.0\DateCalculator.Utils.csproj.CopyComplete

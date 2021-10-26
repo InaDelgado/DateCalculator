@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1525
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateCalculator.System", "DateCalculator\DateCalculator.System.csproj", "{52BBF2BD-21C3-4599-A269-4DACCD12CCCA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateCalculator.Models", "DateCalculator.Models\DateCalculator.Models.csproj", "{B3FB01FE-2AE7-4D50-B2C8-AE37DA399C23}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateCalculator.Utils", "DateCalculator.Utils\DateCalculator.Utils.csproj", "{2425C54A-BC5D-4874-B24C-BB4EDAF422B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{B3FB01FE-2AE7-4D50-B2C8-AE37DA399C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3FB01FE-2AE7-4D50-B2C8-AE37DA399C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3FB01FE-2AE7-4D50-B2C8-AE37DA399C23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2425C54A-BC5D-4874-B24C-BB4EDAF422B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2425C54A-BC5D-4874-B24C-BB4EDAF422B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2425C54A-BC5D-4874-B24C-BB4EDAF422B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2425C54A-BC5D-4874-B24C-BB4EDAF422B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,6 @@ namespace DateCalculator.Models
         private readonly string _operationType;
         private Date _dateInput;
         private long _amount;
-        private int _spentDays;
 
         public OperationIncrease(Date dateInput, long amount)
         {

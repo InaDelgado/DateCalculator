@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DateCalculator.Utils.Validators
+namespace DateCalculator.System
 {
     public class InputValidator
     {

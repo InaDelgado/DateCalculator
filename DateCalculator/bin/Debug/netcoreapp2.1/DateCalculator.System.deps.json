@@ -9,23 +9,51 @@
       "DateCalculator.System/1.0.0": {
         "dependencies": {
           "DateCalculator.Models": "1.0.0",
-          "DateCalculator.Utils": "1.0.0"
+          "xunit.core": "2.4.2-pre.12"
         },
         "runtime": {
           "DateCalculator.System.dll": {}
         }
       },
+      "xunit.abstractions/2.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "xunit.core/2.4.2-pre.12": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.4.2-pre.12",
+          "xunit.extensibility.execution": "2.4.2-pre.12"
+        }
+      },
+      "xunit.extensibility.core/2.4.2-pre.12": {
+        "dependencies": {
+          "xunit.abstractions": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.core.dll": {
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
+          }
+        }
+      },
+      "xunit.extensibility.execution/2.4.2-pre.12": {
+        "dependencies": {
+          "xunit.extensibility.core": "2.4.2-pre.12"
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.execution.dotnet.dll": {
+            "assemblyVersion": "2.4.2.0",
+            "fileVersion": "2.4.2.0"
+          }
+        }
+      },
       "DateCalculator.Models/1.0.0": {
         "runtime": {
           "DateCalculator.Models.dll": {}
-        }
-      },
-      "DateCalculator.Utils/1.0.0": {
-        "dependencies": {
-          "DateCalculator.Models": "1.0.0"
-        },
-        "runtime": {
-          "DateCalculator.Utils.dll": {}
         }
       }
     }
@@ -36,12 +64,35 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DateCalculator.Models/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
+    "xunit.abstractions/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
+      "path": "xunit.abstractions/2.0.3",
+      "hashPath": "xunit.abstractions.2.0.3.nupkg.sha512"
     },
-    "DateCalculator.Utils/1.0.0": {
+    "xunit.core/2.4.2-pre.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0IKhUb1qivtZUQyWl3fQeqbwsKgo4Ndi9ECJ6S5GFb9l8Tr1T5wTPo3KaCOD9ccxRu4jOQmvm9c8fCQd7SyoZg==",
+      "path": "xunit.core/2.4.2-pre.12",
+      "hashPath": "xunit.core.2.4.2-pre.12.nupkg.sha512"
+    },
+    "xunit.extensibility.core/2.4.2-pre.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z6ufPlcGpOEe/GNGAgfwtloAsb8mXuu4X6cBID8dsiTJ0OhD33mU/qkobnlFQVP724rYkFvtiVAjD47CpFFdiQ==",
+      "path": "xunit.extensibility.core/2.4.2-pre.12",
+      "hashPath": "xunit.extensibility.core.2.4.2-pre.12.nupkg.sha512"
+    },
+    "xunit.extensibility.execution/2.4.2-pre.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FBuMA84KNxBMgHLVAqMGVD6DeejjPFTahZgxBClvey+C/HZipeuzKNX6x7Ne/Updpevz2KqituBJJ8yz9TrKbQ==",
+      "path": "xunit.extensibility.execution/2.4.2-pre.12",
+      "hashPath": "xunit.extensibility.execution.2.4.2-pre.12.nupkg.sha512"
+    },
+    "DateCalculator.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

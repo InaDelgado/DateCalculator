@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Us7oHHF1Dyf2HsK+6zsQe/OrtSqJd3liM0pGLKEkAFc9ufBAVCzEZZOUm8Ycxpnp1Ku9Nwbqb4fp7nHyTKsfOg==",
+  "dgSpecHash": "l9z3NDjyr7xn375RUijH+YWW9L+DoEpaJXnGlx5/k/sXMcFTtsn3PKl85ORVaj5X9964nyEr3zHeFvuR0wMrNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\inaia\\source\\repos\\DateCalculator\\DateCalculator\\DateCalculator.System.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,11 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnethostresolver\\2.1.0\\microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\2.1.0\\microsoft.netcore.targets.2.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\inaia\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\inaia\\.nuget\\packages\\xunit.core\\2.4.2-pre.12\\xunit.core.2.4.2-pre.12.nupkg.sha512",
+    "C:\\Users\\inaia\\.nuget\\packages\\xunit.extensibility.core\\2.4.2-pre.12\\xunit.extensibility.core.2.4.2-pre.12.nupkg.sha512",
+    "C:\\Users\\inaia\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2-pre.12\\xunit.extensibility.execution.2.4.2-pre.12.nupkg.sha512"
   ],
   "logs": []
 }

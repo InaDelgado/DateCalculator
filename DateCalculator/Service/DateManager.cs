@@ -1,8 +1,6 @@
 ﻿using DateCalculator.Models;
 using DateCalculator.Models.Factories;
-using DateCalculator.Utils.Exceptions;
-using DateCalculator.Utils.Extensions;
-using DateCalculator.Utils.Validators;
+using DateCalculator.Models.Extensions;
 using System;
 
 namespace DateCalculator.System

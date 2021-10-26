@@ -1,7 +1,6 @@
-﻿using DateCalculator.Utils.Exceptions;
-using DateCalculator.Utils.Extensions;
+﻿using DateCalculator.Models.Extensions;
 
-namespace DateCalculator.Utils
+namespace DateCalculator.System
 {
     public static class TimeValidator
     {

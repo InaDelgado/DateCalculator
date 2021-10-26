@@ -1,6 +1,6 @@
-﻿using DateCalculator.Utils.Exceptions;
+﻿using DateCalculator.Models;
 
-namespace DateCalculator.Utils.Validators
+namespace DateCalculator.System
 {
     public static class OperationValidator
     {
@@ -13,6 +13,6 @@ namespace DateCalculator.Utils.Validators
         }
 
         private static bool IsValidOperation(string operation)
-        => (operation.ToLower().Equals(ConstsUtils.INCREASE) || operation.ToLower().Equals(ConstsUtils.DECREASE));
+        => (operation.ToLower().Equals(Consts.INCREASE) || operation.ToLower().Equals(Consts.DECREASE));
     }
 }

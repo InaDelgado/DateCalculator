@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DateCalculator.Utils.Exceptions
+namespace DateCalculator.System
 {
     public class InvalidTimeException : Exception
     {

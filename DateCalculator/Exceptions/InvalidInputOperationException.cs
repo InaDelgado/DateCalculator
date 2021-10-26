@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace DateCalculator.Utils.Exceptions
+namespace DateCalculator.System
 {
     public class InvalidInputOperationException : Exception
     {
