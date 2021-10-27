@@ -10,7 +10,6 @@ C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.1\DateCalculator.System.AssemblyInfoInputs.cache
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.1\DateCalculator.System.AssemblyInfo.cs
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.1\DateCalculator.System.csproj.CoreCompileInputs.cache
-C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.1\DateCalculator.System.csproj.CopyComplete
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.1\DateCalculator.System.dll
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.1\DateCalculator.System.pdb
 C:\Users\inaia\source\repos\DateCalculator\DateCalculator\obj\Debug\netcoreapp2.1\DateCalculator.System.genruntimeconfig.cache
