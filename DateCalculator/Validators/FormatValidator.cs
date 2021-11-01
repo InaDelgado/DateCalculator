@@ -10,7 +10,7 @@ namespace DateCalculator.System
         public static bool IsValidFormatDateTime(string dateTime)
         {
             if (!dateTime.FormatDateIsMatch())
-                throw new FormatStringException("Input date and time format is invalid");
+                throw new FormatStringException("Input date format is not valid");
 
             return true;
         }

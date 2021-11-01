@@ -68,9 +68,7 @@ namespace DateCalculator.System
             {
                 Day = _inputDate.GetDay(),
                 Month = _inputDate.GetMonth(),
-                Year = _inputDate.GetYear(),
-                Hour = _inputDate.GetHour(),
-                Minute = _inputDate.GetMinute()
+                Year = _inputDate.GetYear()
             };
         }
     }

@@ -26,8 +26,7 @@ namespace DateCalculator.System
         }
         public bool ValidateDateTime()
         {
-            return DateValidator.IsValid(DateTime)
-                && TimeValidator.IsValid(DateTime);
+            return DateValidator.IsValid(DateTime);
         }
 
         public bool IsNotEmpty()

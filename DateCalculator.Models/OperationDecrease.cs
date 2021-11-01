@@ -42,7 +42,7 @@ namespace DateCalculator.Models
 
                 var decrease = new Decrease(_amount, _spentDays, _dateInput);
 
-                return $"{decrease.CalculateNewDate()} {_dateInput.Hour}:{_dateInput.Minute}";
+                return decrease.CalculateNewDate();
             }
             catch (Exception ex)
             {

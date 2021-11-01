@@ -23,7 +23,7 @@ namespace DateCalculator.System
         {
             Console.WriteLine("______________________________________________________________________________");
             Console.WriteLine("       PLEASE, ENTER WITH DATAS TO INCREASE OR TO DECREASE DATETIME");
-            Console.Write("       Date and Time (dd/mm/yyyy hh:mm): ");
+            Console.Write("       Date (dd/mm/yyyy): ");
             string date = Console.ReadLine();
             Console.Write("       Operation ('increase' or 'decrease'): ");
             string opInput = Console.ReadLine();

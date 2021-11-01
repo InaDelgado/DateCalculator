@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "J3OU+LKbElMOtEnigDnu5v4zqbpPdIDOxqBFtaFHnMaedKDsQ1EqYv2tPPL6md3Lx4qA4YG2dIr53Zw3/wUFTA==",
-  "success": false,
+  "dgSpecHash": "Yad/jBuX/uHf8wp5Fzr75L1doD1/JWJZVBcp6vYSO97Wl6MXgGjIxv4QaQ5WA+mOtIul+vlnauoCK0pVOjXPfA==",
+  "success": true,
   "projectFilePath": "C:\\Users\\inaia\\source\\repos\\DateCalculator\\DateCalculator.System.Tests\\DateCalculator.System.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\inaia\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
@@ -92,20 +92,10 @@
     "C:\\Users\\inaia\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
     "C:\\Users\\inaia\\.nuget\\packages\\xunit.analyzers\\0.10.0\\xunit.analyzers.0.10.0.nupkg.sha512",
     "C:\\Users\\inaia\\.nuget\\packages\\xunit.assert\\2.4.1\\xunit.assert.2.4.1.nupkg.sha512",
-    "C:\\Users\\inaia\\.nuget\\packages\\xunit.core\\2.4.2-pre.12\\xunit.core.2.4.2-pre.12.nupkg.sha512",
-    "C:\\Users\\inaia\\.nuget\\packages\\xunit.extensibility.core\\2.4.2-pre.12\\xunit.extensibility.core.2.4.2-pre.12.nupkg.sha512",
-    "C:\\Users\\inaia\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2-pre.12\\xunit.extensibility.execution.2.4.2-pre.12.nupkg.sha512",
+    "C:\\Users\\inaia\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
+    "C:\\Users\\inaia\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
+    "C:\\Users\\inaia\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\inaia\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1107",
-      "level": "Error",
-      "message": "Version conflict detected for xunit.core. Install/reference xunit.core 2.4.2-pre.12 directly to project DateCalculator.System.Tests to resolve this issue. \r\n DateCalculator.System.Tests -> DateCalculator.System -> xunit.core (>= 2.4.2-pre.12) \r\n DateCalculator.System.Tests -> xunit 2.4.1 -> xunit.core (= 2.4.1).",
-      "libraryId": "xunit.core",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }

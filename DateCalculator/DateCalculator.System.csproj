@@ -13,8 +13,4 @@
     <Folder Include="Tests\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="xunit.core" Version="2.4.2-pre.12" />
-  </ItemGroup>
-
 </Project>
